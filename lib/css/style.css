@@ -1,4 +1,20 @@
 @charset "UTF-8";
+/*Letra Q;#cronos;#score;.savePerguntasButon*/
+/*Letra U;.resposta:hover;.fa-solid*/
+/*Letra I;.close;#status h2*/
+/*Letra Z; .close;*/
+/*Box shadow: .quizOptionsOn; .modal;.entradaDados */
+/*#modalPerguntas;#modalCampoNomeJogador;#welcomeMessage;#confirm;#firstPulo*/
+/*#btnSalvarNome*/
+/*.resposta.selecionada*/
+/*#confirm*/
+/*#confirm:hover*/
+/*#cronos;#status;@keyframes fimDeJogo*/
+/*.fa-solid:hover*/
+/*@keyframes piscaCerto*/
+/*#novaPerguntaForm*/
+/*.modalli*/
+/*#conteudoPergunta*/
 /*Fonte externa*/
 @font-face {
   font-family: "cartoon";
@@ -22,7 +38,7 @@
 /*--------------------------------------------------------------*/
 /*Estilização da capa*/
 .capa {
-  /*border:2px solid black;*/
+  /*border:2px solid $buracoNegro;*/
   display: inline-block;
   width: 100%;
   height: 100vh;
@@ -60,7 +76,7 @@
 }
 /*---------------------------------------------------------------*/
 .title {
-  /*border:2px solid red;*/
+  /*border:2px solid $sangue;*/
   position: relative;
   width: 20%;
   height: 90%;
@@ -70,7 +86,7 @@
 /*Estilização das letras e animações*/
 /*Animação da letra Q*/
 .letraQ {
-  /*border:1px solid black;*/
+  /*border:1px solid $buracoNegro;*/
   border: none;
   border-radius: 50%;
   background-color: green;
@@ -117,7 +133,7 @@
 /*Animação da letra u*/
 .letraU {
   /*display: inline-block;*/
-  /*border:1px solid black;*/
+  /*border:1px solid $buracoNegro;*/
   border: none;
   border-radius: 50%;
   background-color: orange;
@@ -254,7 +270,7 @@
 /*----------------------------------------------------------------*/
 /* Estilização div class .quizOptionsOn*/
 .quizOptionsOn {
-  /*border:2px solid black;*/
+  /*border:2px solid $buracoNegro;*/
   border: none;
   border-radius: 5px;
   width: 70%;
@@ -278,7 +294,7 @@
 }
 
 .modal {
-  /*border:2px solid black;*/
+  /*border:2px solid $buracoNegro;*/
   border: none;
   border-radius: 5px;
   min-width: 100px;
@@ -345,7 +361,7 @@
 /*----------------------------------------------------------*/
 /*------------------------------------------------------------------*/
 .modal-content {
-  /*border:2px solid black;*/
+  /*border:2px solid $buracoNegro;*/
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -357,7 +373,7 @@
 }
 
 #entradaDadosGamer {
-  /*border:1px solid black;*/
+  /*border:1px solid $buracoNegro;*/
   display: flex;
   justify-content: space-around;
 }
@@ -433,7 +449,7 @@
 
 /*-------------------------------------------------------------------*/
 #quiz {
-  /*border:1px solid red;*/
+  /*border:1px solid $sangue;*/
   /*display:block;*/
   margin-top: 10%;
   text-align: center;
@@ -442,19 +458,19 @@
 
 /*Informações do game ao jogador na tela do quiz*/
 #infos {
-  /*border:2px solid red;*/
+  /*border:2px solid $sangue;*/
   display: flex;
   justify-content: space-around;
 }
 
 #cronometer {
-  /*border: 2px solid grey;*/
+  /*border: 2px solid $rato;*/
   display: flex;
   width: 8em;
 }
 
 #timer {
-  /*border: 1px solid black;*/
+  /*border: 1px solid $buracoNegro;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -463,7 +479,7 @@
 }
 
 #cronos {
-  /*border: 1px solid blue;*/
+  /*border: 1px solid $oceanoAzul;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -479,7 +495,7 @@
     margin-left: 5px;
 }*/
 #score {
-  /*border: 1px solid green;*/
+  /*border: 1px solid $folha;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -531,7 +547,7 @@ button {
 
 /*Botões de próxima pergunta e callHelp----------*/
 .botoesGame {
-  /*border:2px solid red;*/
+  /*border:2px solid $sangue;*/
   /*max-width:300px;*/
   display: flex;
   justify-content: space-around;
@@ -540,7 +556,7 @@ button {
 }
 
 .fa-solid {
-  /*border:3px solid blue;*/
+  /*border:3px solid $oceanoAzul;*/
   background-color: orange;
   display: flex;
   justify-content: center;
@@ -614,7 +630,7 @@ button {
 }
 /*----------------------------------------------------------------*/
 #status {
-  /*border: 2px solid blue;*/
+  /*border: 2px solid $oceanoAzul;*/
   position: fixed;
   top: 50%;
   left: 50%;
@@ -662,7 +678,7 @@ button {
 /*------------------------------------------------------------------*/
 /*Formulario de inserção de dados no game: area acessível somente ao dev*/
 .entradaDados {
-  /*border:1px solid black;*/
+  /*border:1px solid $buracoNegro;*/
   border: none;
   width: 90%;
   height: auto;
@@ -741,7 +757,7 @@ button {
 
 /*Div do botão salvar do form*/
 .savePerguntasButon {
-  /*border:2px solid yellow;*/
+  /*border:2px solid $sol;*/
   display: flex;
   justify-content: center;
   /*margin-top:5%;*/
@@ -759,7 +775,7 @@ button {
 
 /*-------------------------------------------------------------------*/
 #botoesForm {
-  /*border: 2px solid red;*/
+  /*border: 2px solid $sangue;*/
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -768,7 +784,7 @@ button {
   min-width: 290px;
   min-height: 60px;
   margin: auto auto;
-  /*box-shadow: 2px 2px 3px black;*/
+  /*box-shadow: 2px 2px 3px $buracoNegro;*/
 }
 
 /*Botão sair do form*/
@@ -793,11 +809,11 @@ button {
 /*------------------------------------------------------*/
 /*Modal do modo edit*/
 /*.modalli {
-    border:1px solid blue;
-    background-color: #778899;   
+    border:1px solid $oceanoAzul;
+    background-color: $anoitecer;   
     min-height: 350px;
     margin: auto auto;
-    box-shadow: 2px 2px 3px rgb(14, 5, 5);
+    box-shadow: 2px 2px 3px $sombraModalli;
     border: none;
     border-radius: 5px;
     min-width: 100px;
@@ -816,7 +832,7 @@ button {
 /*--------------------------------------------------------*/
 /*Div que abriga o conteúdo da pergunta no modo edit*/
 #conteudoPergunta {
-  /*border: 2px solid red;*/
+  /*border: 2px solid $sangue;*/
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -839,7 +855,7 @@ button {
 }
 
 .comandosEdit {
-  /*border: 2px solid black;*/
+  /*border: 2px solid $buracoNegro;*/
   display: flex;
   justify-content: space-around;
   padding: 8px;

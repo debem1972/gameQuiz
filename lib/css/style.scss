@@ -1,3 +1,6 @@
+@import "./variaveis";
+
+
 /*Fonte externa*/
 @font-face {
     font-family: "cartoon";
@@ -26,7 +29,7 @@
 /*--------------------------------------------------------------*/
 /*Estilização da capa*/
 .capa {
-    /*border:2px solid black;*/
+    /*border:2px solid $buracoNegro;*/
     display: inline-block;
     width: 100%;
     height: 100vh;
@@ -69,7 +72,7 @@
 
 /*---------------------------------------------------------------*/
 .title {
-    /*border:2px solid red;*/
+    /*border:2px solid $sangue;*/
     position: relative;
     width: 20%;
     height: 90%;
@@ -81,16 +84,16 @@
 /*Estilização das letras e animações*/
 /*Animação da letra Q*/
 .letraQ {
-    /*border:1px solid black;*/
+    /*border:1px solid $buracoNegro;*/
     border: none;
     border-radius: 50%;
-    background-color: green;
+    background-color: $folha;
     display: inline-block;
     width: 80px;
     height: 80px;
     font-size: 4em;
     font-family: "cartoon";
-    color: yellow;
+    color: $sol;
     margin-left: 5%;
     position: absolute;
     top: -250px;
@@ -142,10 +145,10 @@
 /*Animação da letra u*/
 .letraU {
     /*display: inline-block;*/
-    /*border:1px solid black;*/
+    /*border:1px solid $buracoNegro;*/
     border: none;
     border-radius: 50%;
-    background-color: orange;
+    background-color: $laranja;
     width: 80px;
     height: 80px;
     font-size: 4em;
@@ -202,15 +205,15 @@
 /*Animação da letra i*/
 .letraI {
     /*display: inline-block;*/
-    border: 1px solid black;
+    border: 1px solid $buracoNegro;
     border: none;
     border-radius: 50%;
-    background-color: #00BFFF;
+    background-color: $ceu;
     width: 80px;
     height: 80px;
     font-size: 4em;
     font-family: "cartoon";
-    color: red;
+    color: $sangue;
     margin-left: 5%;
     position: absolute;
     top: -250px;
@@ -261,15 +264,15 @@
 /*Animação da letra Z*/
 .letraZ {
     /*display: inline-block;*/
-    border: 1px solid black;
+    border: 1px solid $buracoNegro;
     border: none;
     border-radius: 50%;
-    background-color: red;
+    background-color: $sangue;
     width: 80px;
     height: 80px;
     font-size: 4em;
     font-family: "cartoon";
-    color: #F8F8FF;
+    color: $nuvem;
     margin-left: 5%;
     position: absolute;
     top: -250px;
@@ -322,7 +325,7 @@
 /* Estilização div class .quizOptionsOn*/
 
 .quizOptionsOn {
-    /*border:2px solid black;*/
+    /*border:2px solid $buracoNegro;*/
     border: none;
     border-radius: 5px;
     width: 70%;
@@ -337,7 +340,7 @@
     transform: translate(-50%, -50%);
     background-color: transparent;
     backdrop-filter: blur(10px);
-    box-shadow: 1px 1px 10px rgba(232, 200, 240, 0.5);
+    box-shadow: 1px 1px 10px $sombraLeve;
     padding: 20px;
     animation: surja 2s;
     transition: all 2s;
@@ -345,7 +348,7 @@
 }
 
 .modal {
-    /*border:2px solid black;*/
+    /*border:2px solid $buracoNegro;*/
     border: none;
     border-radius: 5px;
     min-width: 100px;
@@ -360,7 +363,7 @@
     transform: translate(-50%, -50%);
     background-color: transparent;
     backdrop-filter: blur(10px);
-    box-shadow: 1px 1px 10px rgba(232, 200, 240, 0.5);
+    box-shadow: 1px 1px 10px $sombraLeve;
     padding: 20px;
     animation: surja 2s;
     transition: all 2s;
@@ -389,7 +392,7 @@
     max-width: 200px;
     border: none;
     border-radius: 8px;
-    box-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 3px $buracoNegro;
     margin-bottom: 10px;
     cursor: pointer;
     /*z-index:3;*/
@@ -404,8 +407,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: $pretinhoBasico;
+    color: $fantasma;
     font-size: 20px;
     border-radius: 10px;
     text-align: center;
@@ -416,7 +419,7 @@
 
 /*------------------------------------------------------------------*/
 .modal-content {
-    /*border:2px solid black;*/
+    /*border:2px solid $buracoNegro;*/
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -428,7 +431,7 @@
 }
 
 #entradaDadosGamer {
-    /*border:1px solid black;*/
+    /*border:1px solid $buracoNegro;*/
     display: flex;
     justify-content: space-around;
 }
@@ -441,8 +444,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: $pretinhoBasico;
+    color: $fantasma;
     font-size: 20px;
     border-radius: 10px;
     text-align: center;
@@ -460,23 +463,23 @@
     border: none;
     border-radius: 5px;
     margin: 10px auto;
-    box-shadow: 2px 2px 3px grey;
+    box-shadow: 2px 2px 3px $rato;
 }
 
 /*-------------------------------------------------------------------*/
 /*Botão de fechar o modal*/
 .close {
-    border: 1px solid black;
+    border: 1px solid $buracoNegro;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 93%;
     margin-top: 1%;
     border-radius: 50%;
-    background-color: red;
+    background-color: $sangue;
     width: 25px;
     height: 25px;
-    color: white;
+    color: $fantasma;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
@@ -494,8 +497,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: $pretinhoBasico;
+    color: $fantasma;
     font-size: 20px;
     border-radius: 10px;
     text-align: center;
@@ -511,7 +514,7 @@
 
 /*-------------------------------------------------------------------*/
 #quiz {
-    /*border:1px solid red;*/
+    /*border:1px solid $sangue;*/
     /*display:block;*/
     margin-top: 10%;
     text-align: center;
@@ -520,19 +523,19 @@
 
 /*Informações do game ao jogador na tela do quiz*/
 #infos {
-    /*border:2px solid red;*/
+    /*border:2px solid $sangue;*/
     display: flex;
     justify-content: space-around;
 }
 
 #cronometer {
-    /*border: 2px solid grey;*/
+    /*border: 2px solid $rato;*/
     display: flex;
     width: 8em;
 }
 
 #timer {
-    /*border: 1px solid black;*/
+    /*border: 1px solid $buracoNegro;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -541,16 +544,16 @@
 }
 
 #cronos {
-    /*border: 1px solid blue;*/
+    /*border: 1px solid $oceanoAzul;*/
     display: flex;
     justify-content: center;
     align-items: center;
     height: 2em;
     width: 4em;
     padding: 2px;
-    background-color: black;
+    background-color: $buracoNegro;
     font-family: 'cronometro';
-    color: yellow;
+    color: $sol;
 }
 
 /*#cronos span {
@@ -558,7 +561,7 @@
 }*/
 
 #score {
-    /*border: 1px solid green;*/
+    /*border: 1px solid $folha;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -589,30 +592,30 @@ button {
 }
 
 .resposta:hover {
-    background-color: orange;
+    background-color: $laranja;
 }
 
 .resposta.selecionada {
-    background-color: #1dccdc;
+    background-color: $aguaCaribe;
     font-weight: 600;
 }
 
 #confirm {
     margin: auto auto;
-    background-color: rgb(68, 120, 32);
-    color: white;
+    background-color: $manaca;
+    color: $fantasma;
     border: none;
     border-radius: 10px;
     cursor: pointer;
 }
 
 #confirm:hover {
-    background-color: rgb(23, 77, 23);
+    background-color: $verdeOliva;
 }
 
 /*Botões de próxima pergunta e callHelp----------*/
 .botoesGame {
-    /*border:2px solid red;*/
+    /*border:2px solid $sangue;*/
     /*max-width:300px;*/
     display: flex;
     justify-content: space-around;
@@ -621,8 +624,8 @@ button {
 }
 
 .fa-solid {
-    /*border:3px solid blue;*/
-    background-color: orange;
+    /*border:3px solid $oceanoAzul;*/
+    background-color: $laranja;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -633,7 +636,7 @@ button {
 }
 
 .fa-solid:hover {
-    background-color: orangered;
+    background-color: $moranga;
 }
 
 .fa-solid:active {
@@ -648,8 +651,8 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: $pretinhoBasico;
+    color: $fantasma;
     font-size: 20px;
     border-radius: 10px;
     text-align: center;
@@ -662,8 +665,8 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: $pretinhoBasico;
+    color: $fantasma;
     font-size: 20px;
     border-radius: 10px;
     text-align: center;
@@ -679,14 +682,14 @@ button {
 /*------------------------------------------------*/
 
 .errada {
-    background-color: red;
-    color: white;
+    background-color: $sangue;
+    color: $fantasma;
     font-weight: 600;
 }
 
 .correta {
-    background-color: green;
-    color: white;
+    background-color: $folha;
+    color: $fantasma;
     font-weight: 600;
     animation: piscaCerto 0.5s infinite;
 }
@@ -696,19 +699,19 @@ button {
 
     0%,
     49% {
-        background-color: green;
+        background-color: $folha;
     }
 
     50%,
     100% {
-        background-color: seagreen;
+        background-color: $marVerde;
     }
 }
 
 /*----------------------------------------------------------------*/
 
 #status {
-    /*border: 2px solid blue;*/
+    /*border: 2px solid $oceanoAzul;*/
     position: fixed;
     top: 50%;
     left: 50%;
@@ -725,7 +728,7 @@ button {
 /*Config do efeito de scale do game over */
 #status h2 {
     margin-bottom: 50px;
-    color: red;
+    color: $sangue;
     animation: fimDeJogo 0.8s infinite;
 }
 
@@ -734,13 +737,13 @@ button {
     0%,
     49% {
         transform: scale(0.3);
-        color: blue;
+        color: $oceanoAzul;
     }
 
     50%,
     100% {
         transform: scale(1.5);
-        color: red;
+        color: $sangue;
     }
 
 
@@ -748,8 +751,8 @@ button {
 
 
 #novoJogo {
-    background-color: black;
-    color: white;
+    background-color: $buracoNegro;
+    color: $fantasma;
     margin: auto auto;
     font-weight: 600;
     cursor: pointer;
@@ -758,9 +761,9 @@ button {
 
 /*Oculta a div #status e mostra a div capa*/
 #sair {
-    background-color: red;
+    background-color: $sangue;
     margin: 20px auto;
-    color: white;
+    color: $fantasma;
     font-weight: 600;
     cursor: pointer;
 }
@@ -771,7 +774,7 @@ button {
 /*------------------------------------------------------------------*/
 /*Formulario de inserção de dados no game: area acessível somente ao dev*/
 .entradaDados {
-    /*border:1px solid black;*/
+    /*border:1px solid $buracoNegro;*/
     border: none;
     width: 90%;
     height: auto;
@@ -782,7 +785,7 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 1px 1px 10px rgba(232, 200, 240, 0.5);
+    box-shadow: 1px 1px 10px $sombraLeve;
     padding: 20px;
     animation: surja 2s;
     transition: all 2s;
@@ -790,8 +793,8 @@ button {
 
 .entradaDados h3 {
     margin-bottom: 15px;
-    color: white;
-    text-shadow: 2px 2px 3px black;
+    color: $fantasma;
+    text-shadow: 2px 2px 3px $buracoNegro;
     font-size: 1.3em;
 }
 
@@ -800,17 +803,17 @@ button {
 /*Formulário*/
 #novaPerguntaForm {
     /*border:1px solid blue;*/
-    background-color: #778899;
+    background-color: $anoitecer;
     max-width: 300px;
     min-width: 290px;
     min-height: 350px;
     margin: auto auto;
-    box-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 3px $buracoNegro;
 }
 
 #novaPerguntaForm input {
     margin-bottom: 20px;
-    box-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 3px $buracoNegro;
     border: none;
 }
 
@@ -859,7 +862,7 @@ button {
 
 /*Div do botão salvar do form*/
 .savePerguntasButon {
-    /*border:2px solid yellow;*/
+    /*border:2px solid $sol;*/
     display: flex;
     justify-content: center;
     /*margin-top:5%;*/
@@ -871,13 +874,13 @@ button {
     height: 30px;
     border: none;
     border-radius: 8px;
-    box-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 3px $buracoNegro;
     cursor: pointer;
 }
 
 /*-------------------------------------------------------------------*/
 #botoesForm {
-    /*border: 2px solid red;*/
+    /*border: 2px solid $sangue;*/
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -886,7 +889,7 @@ button {
     min-width: 290px;
     min-height: 60px;
     margin: auto auto;
-    /*box-shadow: 2px 2px 3px black;*/
+    /*box-shadow: 2px 2px 3px $buracoNegro;*/
 }
 
 /*Botão sair do form*/
@@ -895,7 +898,7 @@ button {
     height: 30px;
     border: none;
     border-radius: 8px;
-    box-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 3px $buracoNegro;
     cursor: pointer;
 }
 
@@ -904,18 +907,18 @@ button {
     height: 30px;
     border: none;
     border-radius: 8px;
-    box-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 3px $buracoNegro;
     cursor: pointer;
 }
 
 /*------------------------------------------------------*/
 /*Modal do modo edit*/
 /*.modalli {
-    border:1px solid blue;
-    background-color: #778899;   
+    border:1px solid $oceanoAzul;
+    background-color: $anoitecer;   
     min-height: 350px;
     margin: auto auto;
-    box-shadow: 2px 2px 3px rgb(14, 5, 5);
+    box-shadow: 2px 2px 3px $sombraModalli;
     border: none;
     border-radius: 5px;
     min-width: 100px;
@@ -936,14 +939,14 @@ button {
 /*--------------------------------------------------------*/
 /*Div que abriga o conteúdo da pergunta no modo edit*/
 #conteudoPergunta {
-    /*border: 2px solid red;*/
+    /*border: 2px solid $sangue;*/
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 200px;
-    background-color: #2d88e3;
-    box-shadow: 2px 2px 3px black;
+    background-color: $olhosAzuis;
+    box-shadow: 2px 2px 3px $buracoNegro;
     padding: 5px 5px;
 }
 
@@ -954,13 +957,13 @@ button {
 #conteudoPergunta input {
     margin-bottom: 10px;
     padding-left: 5px;
-    box-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 3px $buracoNegro;
     border: none;
 
 }
 
 .comandosEdit {
-    /*border: 2px solid black;*/
+    /*border: 2px solid $buracoNegro;*/
     display: flex;
     justify-content: space-around;
     padding: 8px;
@@ -976,12 +979,12 @@ button {
     height: 50px;
     border: none;
     border-radius: 8px;
-    box-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 3px $buracoNegro;
     cursor: pointer;
 }
 
 .efeitoHover:hover {
-    background-color: green;
+    background-color: $folha;
 }
 
 .efeitoHover {
