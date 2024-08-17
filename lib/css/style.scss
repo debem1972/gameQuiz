@@ -798,6 +798,29 @@ button {
     font-size: 1.3em;
 }
 
+.microfone{
+    /*border:2px solid $buracoNegro;*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    min-width: 290px;
+    margin:auto;
+}
+
+#microphoneButton{
+    width:5em;    
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;    
+    margin-bottom:7px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 2px 3px grey;
+}
+
 
 
 /*Formulário*/
