@@ -67,255 +67,8 @@
 
 
 /*---------------------------------------------------------------*/
-.title {
-    /*border:2px solid $sangue;*/
-    position: relative;
-    width: 20%;
-    height: 90%;
-    margin-left: 1%;
-
-}
-
-
-/*Estilização das letras e animações*/
-/*Animação da letra Q*/
-.letraQ {
-    /*border:1px solid $buracoNegro;*/
-    border: none;
-    border-radius: 50%;
-    background-color: $folha;
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    font-size: 4em;
-    font-family: "cartoon";
-    color: $sol;
-    margin-left: 5%;
-    position: absolute;
-    top: -250px;
-    animation: bounceQq 2s forwards;
-    animation-delay: 3s;
-
-}
-
-#letraQq {
-    text-align: center;
-
-}
-
-@keyframes bounceQq {
-
-    0%,
-    30% {
-        transform: translateY(-250px);
-        /* Começa na posição inicial */
-
-    }
-
-    40% {
-        transform: translateY(-30px);
-        /* A letra sobe */
-    }
-
-    50% {
-        transform: translateY(400px);
-        /* A letra cai */
-    }
-
-    60%,
-    70% {
-        transform: translateY(350px);
-        /* Ajuste este valor para controlar o quão alto a letra Z salta após cair */
-    }
-
-
-    100% {
-        transform: translateY(400px);
-        /* A letra permanece na posição final de queda */
-
-    }
-
-}
-
-/*---------------------------------------------------------------------*/
-/*Animação da letra u*/
-.letraU {
-    /*display: inline-block;*/
-    /*border:1px solid $buracoNegro;*/
-    border: none;
-    border-radius: 50%;
-    background-color: $laranja;
-    width: 80px;
-    height: 80px;
-    font-size: 4em;
-    font-family: "cartoon";
-    margin-left: 5%;
-    position: absolute;
-    top: -250px;
-    animation: bounceUu 2s forwards;
-    /* Removido 'infinite' e adicionado 'forwards' */
-    animation-delay: 2s;
-
-}
-
-#letraUu {
-    text-align: center;
-}
-
-@keyframes bounceUu {
-
-    0%,
-    30% {
-        transform: translateY(-250px);
-        /* Começa na posição inicial */
-    }
-
-    40% {
-        transform: translateY(-30px);
-        /* A letra sobe */
-    }
-
-    50% {
-        transform: translateY(500px) rotateY(0deg);
-        /* A letra cai */
-    }
-
-    60%,
-    70% {
-        transform: translateY(450px) rotateY(0deg);
-        /* Ajuste este valor para controlar o quão alto a letra Z salta após cair */
-    }
-
-
-    100% {
-        transform: translateY(500px) rotateY(360deg);
-        /* A letra permanece na posição final de queda */
-
-    }
-
-
-}
-
-
-/*--------------------------------------------------------------------*/
-/*Animação da letra i*/
-.letraI {
-    /*display: inline-block;*/
-    border: 1px solid $buracoNegro;
-    border: none;
-    border-radius: 50%;
-    background-color: $ceu;
-    width: 80px;
-    height: 80px;
-    font-size: 4em;
-    font-family: "cartoon";
-    color: $sangue;
-    margin-left: 5%;
-    position: absolute;
-    top: -250px;
-    animation: bounceIi 2s forwards;
-    /*Adicionado 'forwards'que faz a letra permanecer no local final da animação. */
-    animation-delay: 1s;
-}
-
-#letraIi {
-    text-align: center;
-}
-
-@keyframes bounceIi {
-
-    0%,
-    30% {
-        transform: translateY(-250px);
-        /* Começa na posição inicial */
-    }
-
-    40% {
-        transform: translateY(-30px);
-        /* A letra sobe */
-    }
-
-    50% {
-        transform: translateY(600px);
-        /* A letra cai */
-    }
-
-    60%,
-    70% {
-        transform: translateY(550px);
-        /* Ajuste este valor para controlar o quão alto a letra Z salta após cair */
-    }
-
-
-    100% {
-        transform: translateY(600px);
-        /* A letra permanece na posição final de queda */
-
-    }
-
-
-}
-
-/*---------------------------------------------------------------------*/
-/*Animação da letra Z*/
-.letraZ {
-    /*display: inline-block;*/
-    border: 1px solid $buracoNegro;
-    border: none;
-    border-radius: 50%;
-    background-color: $sangue;
-    width: 80px;
-    height: 80px;
-    font-size: 4em;
-    font-family: "cartoon";
-    color: $nuvem;
-    margin-left: 5%;
-    position: absolute;
-    top: -250px;
-    animation: bounceZeRotate 2s forwards;
-
-
-}
-
-#letraZe {
-    text-align: center;
-}
-
-@keyframes bounceZeRotate {
-
-    0%,
-    30% {
-        transform: translateY(-250px);
-        /* Começa na posição inicial */
-
-    }
-
-    40% {
-        transform: translateY(-30px);
-        /* A letra sobe */
-
-    }
-
-    50% {
-        transform: translateY(700px) rotateX(0deg);
-        /* A letra cai */
-    }
-
-    60%,
-    70% {
-        transform: translateY(600px) rotateX(0deg);
-        /* Ajuste este valor para controlar o quão alto a letra Z salta após cair */
-    }
-
-    100% {
-        transform: translateY(700px) rotateX(360deg);
-        /* A letra permanece na posição final de queda */
-
-    }
-
-
-}
-
+//Estilização das letras e animações
+@import "./lettersAnimation";
 
 /*----------------------------------------------------------------*/
 /* Estilização div class .quizOptionsOn*/
@@ -794,27 +547,27 @@ button {
     font-size: 1.3em;
 }
 
-.microfone{
+.microfone {
     /*border:2px solid $buracoNegro;*/
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     max-width: 300px;
     min-width: 290px;
-    margin:auto;
+    margin: auto;
 }
 
-#microphoneButton{
-    display:flex;
-    justify-content:center;
+#microphoneButton {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    width:5em;    
+    width: 5em;
     padding: 10px;
     border: none;
     background-color: $folha;
     color: white;
-    border-radius: 4px;    
-    margin-bottom:7px;
+    border-radius: 4px;
+    margin-bottom: 7px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     box-shadow: 2px 2px 3px $buracoNegro;
@@ -989,7 +742,7 @@ button {
     display: flex;
     justify-content: space-between;
     padding: 5px;
-    gap:3px;
+    gap: 3px;
 }
 
 /*Botoes do modo edit*/
@@ -998,7 +751,7 @@ button {
 #editQuestion,
 #deleteQuestion,
 #saveChanges {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
