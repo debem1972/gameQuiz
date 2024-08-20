@@ -315,11 +315,13 @@
     justify-content: center;
     align-items: center;
     padding: 2px;
+
+    span {
+        margin-left: 5px;
+    }
 }
 
-#score span {
-    margin-left: 5px;
-}
+
 
 /*-------------------------------------------------------*/
 
