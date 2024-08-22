@@ -28,6 +28,11 @@
   font-weight: normal;
   font-style: normal;
 }
+@media only screen and (max-width: 768px) {
+  #conteudoPergunta p {
+    font-size: 0.9em;
+  }
+}
 /*Reset*/
 * {
   margin: 0;
@@ -741,14 +746,6 @@ button {
   border: none;
 }
 
-/*#botaoForm {
-    width: 60%;*/
-/*height:30px;*/
-/*margin: auto auto;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 2px 2px 3px black;
-}*/
 /*Input da pergunta*/
 #novaPergunta {
   width: 95%;

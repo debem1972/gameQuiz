@@ -17,7 +17,10 @@
     font-style: normal;
 }
 
-
+//-----------------------------------------------------------------
+//Responsividade
+@import "./responsivo";
+//-------------------------------------------------------------------
 
 /*Reset*/
 * {
@@ -593,20 +596,6 @@ button {
     box-shadow: 2px 2px 3px $buracoNegro;
     border: none;
 }
-
-
-
-
-
-/*#botaoForm {
-    width: 60%;*/
-/*height:30px;*/
-/*margin: auto auto;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 2px 2px 3px black;
-}*/
-
 
 
 
