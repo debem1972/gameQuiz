@@ -328,10 +328,7 @@
 /*-------------------------------------------------------------------*/
 /*Botões tipos de quizzes*/
 #cinema,
-#desenhos,
-#geografia,
 #meuQuiz,
-#quadrinhos,
 #formOn {
   max-width: 200px;
   border: none;
@@ -339,7 +336,6 @@
   box-shadow: 2px 2px 3px black;
   margin-bottom: 10px;
   cursor: pointer;
-  /*z-index:3;*/
 }
 
 /*-------------------------------------------------------------*/
@@ -367,12 +363,13 @@
   flex-direction: column;
   width: 100%;
 }
-
 .modal-content h2 {
-  /*text-align: center;*/
   margin: 15px auto;
 }
 
+/*.modal-content h2 {
+    margin: 15px auto;
+}*/
 #entradaDadosGamer {
   /*border:1px solid $buracoNegro;*/
   display: flex;

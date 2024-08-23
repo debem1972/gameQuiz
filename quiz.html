@@ -114,7 +114,7 @@
     <div class="entradaDados oculto">
         <h3>Formulário de inserção de dados no seu quiz</h3>
         <div class="microfone">
-            <button id="microphoneButton" title="Clique aqui para falar..."><i
+            <button id="microphoneButton" title="Clique dentro de um dos campos abaixo e clique aqui para falar..."><i
                     class="fa-solid fa-microphone-lines"></i></button>
         </div>
         <!--Formulário HTML onde os usuários inserem novas perguntas -->
@@ -136,10 +136,11 @@
             <input type="text" id="resposta4" name="resposta4" tabindex="5" required>
 
             <label for="correta">Índice da resposta correta:</label>
-            <input type="number" id="correta" name="correta" min="0" max="3" tabindex="6" required>
+            <input type="number" id="correta" name="correta" min="0" max="3"
+                title="Preencha este campo digitando um nº..." tabindex="6" required>
 
             <label for="dica">Dica:</label>
-            <input type="text" id="dica" name="dica" tabindex="7" required>
+            <input type="text" id="dica" name="dica" title="Dê uma dica curta aqui..." tabindex="7" required>
 
             <div class="savePerguntasButon">
                 <button id="saveQuestion" class="efeitoHover" type="button" tabindex="8" onclick="salvarPergunta()"
