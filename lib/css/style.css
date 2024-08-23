@@ -31,6 +31,7 @@
 @media only screen and (max-width: 768px) {
   #conteudoPergunta p {
     font-size: 0.9em;
+    line-height: 14px;
   }
 }
 /*Reset*/
@@ -367,9 +368,6 @@
   margin: 15px auto;
 }
 
-/*.modal-content h2 {
-    margin: 15px auto;
-}*/
 #entradaDadosGamer {
   /*border:1px solid $buracoNegro;*/
   display: flex;
@@ -448,7 +446,6 @@
 /*-------------------------------------------------------------------*/
 #quiz {
   /*border:1px solid $sangue;*/
-  /*display:block;*/
   margin-top: 10%;
   text-align: center;
   padding: 20px;
@@ -489,9 +486,6 @@
   color: yellow;
 }
 
-/*#cronos span {
-    margin-left: 5px;
-}*/
 #score {
   /*border: 1px solid $folha;*/
   display: flex;
@@ -519,7 +513,6 @@ button {
   margin-bottom: 1%;
   cursor: pointer;
 }
-
 .resposta:hover {
   background-color: orange;
 }
@@ -537,7 +530,6 @@ button {
   border-radius: 10px;
   cursor: pointer;
 }
-
 #confirm:hover {
   background-color: rgb(23, 77, 23);
 }
@@ -545,10 +537,8 @@ button {
 /*Botões de próxima pergunta e callHelp----------*/
 .botoesGame {
   /*border:2px solid $sangue;*/
-  /*max-width:300px;*/
   display: flex;
   justify-content: space-around;
-  /*align-items: center;*/
   margin-top: 20px;
 }
 
@@ -563,11 +553,9 @@ button {
   height: 35px;
   cursor: pointer;
 }
-
 .fa-solid:hover {
   background-color: orangered;
 }
-
 .fa-solid:active {
   transform: scale(0.8);
 }
@@ -736,7 +724,6 @@ button {
   margin: auto auto;
   box-shadow: 2px 2px 3px black;
 }
-
 #novaPerguntaForm input {
   margin-bottom: 20px;
   box-shadow: 2px 2px 3px black;
@@ -775,7 +762,6 @@ button {
   /*border:2px solid $sol;*/
   display: flex;
   justify-content: center;
-  /*margin-top:5%;*/
 }
 
 /*Botão Salvar do form*/
@@ -799,7 +785,6 @@ button {
   min-width: 290px;
   min-height: 60px;
   margin: auto auto;
-  /*box-shadow: 2px 2px 3px $buracoNegro;*/
 }
 
 /*Botão sair do form*/
@@ -821,29 +806,6 @@ button {
   cursor: pointer;
 }
 
-/*------------------------------------------------------*/
-/*Modal do modo edit*/
-/*.modalli {
-    border:1px solid $oceanoAzul;
-    background-color: $anoitecer;   
-    min-height: 350px;
-    margin: auto auto;
-    box-shadow: 2px 2px 3px $sombraModalli;
-    border: none;
-    border-radius: 5px;
-    min-width: 100px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);    
-    padding: 20px;*/
-/*animation: surja 2s;
-    transition: all 2s;*/
 /*--------------------------------------------------------*/
 /*Div que abriga o conteúdo da pergunta no modo edit*/
 #conteudoPergunta {
@@ -857,11 +819,9 @@ button {
   box-shadow: 2px 2px 3px black;
   padding: 5px 5px;
 }
-
 #conteudoPergunta p {
   line-height: 19px;
 }
-
 #conteudoPergunta input {
   margin-bottom: 10px;
   padding-left: 5px;
@@ -869,6 +829,16 @@ button {
   border: none;
 }
 
+/*#conteudoPergunta p {
+    line-height: 19px;
+}*/
+/*#conteudoPergunta input {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    box-shadow: 2px 2px 3px $buracoNegro;
+    border: none;
+
+}*/
 .comandosEdit {
   /*border: 2px solid $buracoNegro;*/
   display: flex;
