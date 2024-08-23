@@ -739,14 +739,17 @@ button {
     cursor: pointer;
 }
 
-.efeitoHover:hover {
-    background-color: $folha;
-}
+
 
 .efeitoHover {
     transition: transform 0.3s ease;
+
+    &:hover {
+        background-color: $folha;
+    }
+
+    &:active {
+        transform: scale(0.8);
+    }
 }
 
-.efeitoHover:active {
-    transform: scale(0.8);
-}

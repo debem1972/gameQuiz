@@ -864,14 +864,12 @@ button {
   cursor: pointer;
 }
 
-.efeitoHover:hover {
-  background-color: green;
-}
-
 .efeitoHover {
   transition: transform 0.3s ease;
 }
-
+.efeitoHover:hover {
+  background-color: green;
+}
 .efeitoHover:active {
   transform: scale(0.8);
 }/*# sourceMappingURL=style.css.map */
