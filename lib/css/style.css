@@ -761,6 +761,9 @@ button {
   transition: 0.3s ease-in-out;
   box-shadow: 2px 2px 3px black;
 }
+#infoWiki img {
+  border-radius: 50%;
+}
 #infoWiki a {
   color: white;
   font-size: 1.1em;

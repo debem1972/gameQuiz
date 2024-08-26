@@ -657,6 +657,10 @@ button {
     transition: 0.3s ease-in-out;
     box-shadow: 2px 2px 3px $buracoNegro;
 
+    img{
+        border-radius:50%;
+    }
+
     a{
         color:$fantasma;
         font-size:1.1em;
