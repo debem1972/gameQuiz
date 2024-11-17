@@ -1,0 +1,1029 @@
+@import "./variaveis";
+
+
+/*Fonte externa*/
+@font-face {
+    font-family: "cartoon";
+    src: url('../../fonts/From\ Cartoon\ Blocks.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "cronometro";
+    src: url('../../fonts/ds_digital/DS-DIGI.TTF') format('truetype'), url(../../fonts/ds_digital/DS-DIGIB.TTF)format('truetype'), url(../../fonts/ds_digital/DS-DIGII.TTF) format('truetype'), url(../../fonts/ds_digital/DS-DIGIT.TTF)format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------*/
+/*Estilização da capa*/
+.capa {
+    /*border:2px solid $buracoNegro;*/
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    /*position:absolute;*/
+    /*top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);*/
+    background-image: url('../../image/capaQuiz1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/*Animação para a capa ir desaparecendo*/
+.desligaCapa {
+    display: inline-block;
+    animation: capaDesligada 5s ease forwards;
+}
+
+@keyframes capaDesligada {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+
+
+/*---------------------------------------------------------------*/
+.title {
+    /*border:2px solid $sangue;*/
+    position: relative;
+    width: 20%;
+    height: 90%;
+    margin-left: 1%;
+
+}
+
+
+/*Estilização das letras e animações*/
+/*Animação da letra Q*/
+.letraQ {
+    /*border:1px solid $buracoNegro;*/
+    border: none;
+    border-radius: 50%;
+    background-color: $folha;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    font-size: 4em;
+    font-family: "cartoon";
+    color: $sol;
+    margin-left: 5%;
+    position: absolute;
+    top: -250px;
+    animation: bounceQq 2s forwards;
+    animation-delay: 3s;
+
+}
+
+#letraQq {
+    text-align: center;
+
+}
+
+@keyframes bounceQq {
+
+    0%,
+    30% {
+        transform: translateY(-250px);
+        /* Começa na posição inicial */
+
+    }
+
+    40% {
+        transform: translateY(-30px);
+        /* A letra sobe */
+    }
+
+    50% {
+        transform: translateY(400px);
+        /* A letra cai */
+    }
+
+    60%,
+    70% {
+        transform: translateY(350px);
+        /* Ajuste este valor para controlar o quão alto a letra Z salta após cair */
+    }
+
+
+    100% {
+        transform: translateY(400px);
+        /* A letra permanece na posição final de queda */
+
+    }
+
+}
+
+/*---------------------------------------------------------------------*/
+/*Animação da letra u*/
+.letraU {
+    /*display: inline-block;*/
+    /*border:1px solid $buracoNegro;*/
+    border: none;
+    border-radius: 50%;
+    background-color: $laranja;
+    width: 80px;
+    height: 80px;
+    font-size: 4em;
+    font-family: "cartoon";
+    margin-left: 5%;
+    position: absolute;
+    top: -250px;
+    animation: bounceUu 2s forwards;
+    /* Removido 'infinite' e adicionado 'forwards' */
+    animation-delay: 2s;
+
+}
+
+#letraUu {
+    text-align: center;
+}
+
+@keyframes bounceUu {
+
+    0%,
+    30% {
+        transform: translateY(-250px);
+        /* Começa na posição inicial */
+    }
+
+    40% {
+        transform: translateY(-30px);
+        /* A letra sobe */
+    }
+
+    50% {
+        transform: translateY(500px) rotateY(0deg);
+        /* A letra cai */
+    }
+
+    60%,
+    70% {
+        transform: translateY(450px) rotateY(0deg);
+        /* Ajuste este valor para controlar o quão alto a letra Z salta após cair */
+    }
+
+
+    100% {
+        transform: translateY(500px) rotateY(360deg);
+        /* A letra permanece na posição final de queda */
+
+    }
+
+
+}
+
+
+/*--------------------------------------------------------------------*/
+/*Animação da letra i*/
+.letraI {
+    /*display: inline-block;*/
+    border: 1px solid $buracoNegro;
+    border: none;
+    border-radius: 50%;
+    background-color: $ceu;
+    width: 80px;
+    height: 80px;
+    font-size: 4em;
+    font-family: "cartoon";
+    color: $sangue;
+    margin-left: 5%;
+    position: absolute;
+    top: -250px;
+    animation: bounceIi 2s forwards;
+    /*Adicionado 'forwards'que faz a letra permanecer no local final da animação. */
+    animation-delay: 1s;
+}
+
+#letraIi {
+    text-align: center;
+}
+
+@keyframes bounceIi {
+
+    0%,
+    30% {
+        transform: translateY(-250px);
+        /* Começa na posição inicial */
+    }
+
+    40% {
+        transform: translateY(-30px);
+        /* A letra sobe */
+    }
+
+    50% {
+        transform: translateY(600px);
+        /* A letra cai */
+    }
+
+    60%,
+    70% {
+        transform: translateY(550px);
+        /* Ajuste este valor para controlar o quão alto a letra Z salta após cair */
+    }
+
+
+    100% {
+        transform: translateY(600px);
+        /* A letra permanece na posição final de queda */
+
+    }
+
+
+}
+
+/*---------------------------------------------------------------------*/
+/*Animação da letra Z*/
+.letraZ {
+    /*display: inline-block;*/
+    border: 1px solid $buracoNegro;
+    border: none;
+    border-radius: 50%;
+    background-color: $sangue;
+    width: 80px;
+    height: 80px;
+    font-size: 4em;
+    font-family: "cartoon";
+    color: $nuvem;
+    margin-left: 5%;
+    position: absolute;
+    top: -250px;
+    animation: bounceZeRotate 2s forwards;
+
+
+}
+
+#letraZe {
+    text-align: center;
+}
+
+@keyframes bounceZeRotate {
+
+    0%,
+    30% {
+        transform: translateY(-250px);
+        /* Começa na posição inicial */
+
+    }
+
+    40% {
+        transform: translateY(-30px);
+        /* A letra sobe */
+
+    }
+
+    50% {
+        transform: translateY(700px) rotateX(0deg);
+        /* A letra cai */
+    }
+
+    60%,
+    70% {
+        transform: translateY(600px) rotateX(0deg);
+        /* Ajuste este valor para controlar o quão alto a letra Z salta após cair */
+    }
+
+    100% {
+        transform: translateY(700px) rotateX(360deg);
+        /* A letra permanece na posição final de queda */
+
+    }
+
+
+}
+
+
+/*----------------------------------------------------------------*/
+/* Estilização div class .quizOptionsOn*/
+
+.quizOptionsOn {
+    /*border:2px solid $buracoNegro;*/
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 1px 1px 10px $sombraLeve;
+    padding: 20px;
+    animation: surja 2s;
+    transition: all 2s;
+    /*z-index:2;*/
+}
+
+.modal {
+    /*border:2px solid $buracoNegro;*/
+    border: none;
+    border-radius: 5px;
+    min-width: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 1px 1px 10px $sombraLeve;
+    padding: 20px;
+    animation: surja 2s;
+    transition: all 2s;
+}
+
+@keyframes surja {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+/*-------------------------------------------------------------------*/
+/*Botões tipos de quizzes*/
+#cinema,
+#desenhos,
+#geografia,
+#meuQuiz,
+#quadrinhos,
+#formOn {
+    max-width: 200px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px $buracoNegro;
+    margin-bottom: 10px;
+    cursor: pointer;
+    /*z-index:3;*/
+}
+
+/*-------------------------------------------------------------*/
+/*----------------------------------------------*/
+/*Modal de erro sem perguntas salvas no localStorage*/
+#modalPerguntas {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: $pretinhoBasico;
+    color: $fantasma;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/*----------------------------------------------------------*/
+
+/*------------------------------------------------------------------*/
+.modal-content {
+    /*border:2px solid $buracoNegro;*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.modal-content h2 {
+    /*text-align: center;*/
+    margin: 15px auto;
+}
+
+#entradaDadosGamer {
+    /*border:1px solid $buracoNegro;*/
+    display: flex;
+    justify-content: space-around;
+}
+
+/*----------------------------------------------*/
+/*Modal de erro no campo nome do jogador vazio*/
+#modalCampoNomeJogador {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: $pretinhoBasico;
+    color: $fantasma;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/*----------------------------------------------------------*/
+#nomeJogador {
+    width: 50%;
+    padding-left: 10px;
+}
+
+#btnSalvarNome {
+    max-width: 60px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px auto;
+    box-shadow: 2px 2px 3px $rato;
+}
+
+/*-------------------------------------------------------------------*/
+/*Botão de fechar o modal*/
+.close {
+    border: 1px solid $buracoNegro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 93%;
+    margin-top: 1%;
+    border-radius: 50%;
+    background-color: $sangue;
+    width: 25px;
+    height: 25px;
+    color: $fantasma;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+
+
+/*-------------------------------------------------------------------*/
+/*Boas vindas ao novo jogador!*/
+#welcomeMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: $pretinhoBasico;
+    color: $fantasma;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.oculto {
+    display: none;
+}
+
+
+
+
+/*-------------------------------------------------------------------*/
+#quiz {
+    /*border:1px solid $sangue;*/
+    /*display:block;*/
+    margin-top: 10%;
+    text-align: center;
+    padding: 20px;
+}
+
+/*Informações do game ao jogador na tela do quiz*/
+#infos {
+    /*border:2px solid $sangue;*/
+    display: flex;
+    justify-content: space-around;
+}
+
+#cronometer {
+    /*border: 2px solid $rato;*/
+    display: flex;
+    width: 8em;
+}
+
+#timer {
+    /*border: 1px solid $buracoNegro;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    padding: 2px;
+}
+
+#cronos {
+    /*border: 1px solid $oceanoAzul;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: 4em;
+    padding: 2px;
+    background-color: $buracoNegro;
+    font-family: 'cronometro';
+    color: $sol;
+}
+
+/*#cronos span {
+    margin-left: 5px;
+}*/
+
+#score {
+    /*border: 1px solid $folha;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+#score span {
+    margin-left: 5px;
+}
+
+/*-------------------------------------------------------*/
+
+#pergunta {
+    padding: 15px;
+}
+
+button {
+    display: block;
+    width: 300px;
+    padding: 10px;
+
+}
+
+.resposta {
+    margin: auto auto;
+    margin-bottom: 1%;
+    cursor: pointer;
+}
+
+.resposta:hover {
+    background-color: $laranja;
+}
+
+.resposta.selecionada {
+    background-color: $aguaCaribe;
+    font-weight: 600;
+}
+
+#confirm {
+    margin: auto auto;
+    background-color: $manaca;
+    color: $fantasma;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#confirm:hover {
+    background-color: $verdeOliva;
+}
+
+/*Botões de próxima pergunta e callHelp----------*/
+.botoesGame {
+    /*border:2px solid $sangue;*/
+    /*max-width:300px;*/
+    display: flex;
+    justify-content: space-around;
+    /*align-items: center;*/
+    margin-top: 20px;
+}
+
+.fa-solid {
+    /*border:3px solid $oceanoAzul;*/
+    background-color: $laranja;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.fa-solid:hover {
+    background-color: $moranga;
+}
+
+.fa-solid:active {
+    transform: scale(0.8);
+}
+
+/*----------------------------------------------*/
+/*Modais de pulo de pergunta*/
+#firstPulo {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: $pretinhoBasico;
+    color: $fantasma;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#secondPulo {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: $pretinhoBasico;
+    color: $fantasma;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+/*------------------------------------------------*/
+
+.errada {
+    background-color: $sangue;
+    color: $fantasma;
+    font-weight: 600;
+}
+
+.correta {
+    background-color: $folha;
+    color: $fantasma;
+    font-weight: 600;
+    animation: piscaCerto 0.5s infinite;
+}
+
+/*Animação da opção correta*/
+@keyframes piscaCerto {
+
+    0%,
+    49% {
+        background-color: $folha;
+    }
+
+    50%,
+    100% {
+        background-color: $marVerde;
+    }
+}
+
+/*----------------------------------------------------------------*/
+
+#status {
+    /*border: 2px solid $oceanoAzul;*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10%;
+}
+
+
+/*-----------------------------------------*/
+
+/*Div #status*/
+
+/*Config do efeito de scale do game over */
+#status h2 {
+    margin-bottom: 50px;
+    color: $sangue;
+    animation: fimDeJogo 0.8s infinite;
+}
+
+@keyframes fimDeJogo {
+
+    0%,
+    49% {
+        transform: scale(0.3);
+        color: $oceanoAzul;
+    }
+
+    50%,
+    100% {
+        transform: scale(1.5);
+        color: $sangue;
+    }
+
+
+}
+
+
+#novoJogo {
+    background-color: $buracoNegro;
+    color: $fantasma;
+    margin: auto auto;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/*Oculta a div #status e mostra a div capa*/
+#sair {
+    background-color: $sangue;
+    margin: 20px auto;
+    color: $fantasma;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+
+/*------------------------------------------------------------------*/
+/*Formulario de inserção de dados no game: area acessível somente ao dev*/
+.entradaDados {
+    /*border:1px solid $buracoNegro;*/
+    border: none;
+    width: 90%;
+    height: auto;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 10px $sombraLeve;
+    padding: 20px;
+    animation: surja 2s;
+    transition: all 2s;
+}
+
+.entradaDados h3 {
+    margin-bottom: 15px;
+    color: $fantasma;
+    text-shadow: 2px 2px 3px $buracoNegro;
+    font-size: 1.3em;
+}
+
+<<<<<<< HEAD
+=======
+.microfone{
+    /*border:2px solid $buracoNegro;*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    min-width: 290px;
+    margin:auto;
+}
+
+#microphoneButton{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width:5em;    
+    padding: 10px;
+    border: none;
+    background-color: $folha;
+    color: white;
+    border-radius: 4px;    
+    margin-bottom:7px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 2px 3px $buracoNegro;
+}
+
+>>>>>>> Foi centralizado o ícone de microfone no botão id #microphoneButton
+
+
+/*Formulário*/
+#novaPerguntaForm {
+    /*border:1px solid blue;*/
+    background-color: $anoitecer;
+    max-width: 300px;
+    min-width: 290px;
+    min-height: 350px;
+    margin: auto auto;
+    box-shadow: 2px 2px 3px $buracoNegro;
+}
+
+#novaPerguntaForm input {
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 3px $buracoNegro;
+    border: none;
+}
+
+
+
+
+
+/*#botaoForm {
+    width: 60%;*/
+/*height:30px;*/
+/*margin: auto auto;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 3px black;
+}*/
+
+
+
+
+/*Input da pergunta*/
+#novaPergunta {
+    width: 95%;
+    padding-left: 10px;
+}
+
+/*inputs das respostas*/
+#resposta1,
+#resposta2,
+#resposta3,
+#resposta4 {
+    width: 65%;
+    padding-left: 10px;
+}
+
+/* input do campo índice da resposta correta*/
+#correta {
+    width: 34%;
+    padding-left: 10px;
+}
+
+/*Input campo dica*/
+#dica {
+    width: 79%;
+    padding-left: 10px;
+}
+
+/*Div do botão salvar do form*/
+.savePerguntasButon {
+    /*border:2px solid $sol;*/
+    display: flex;
+    justify-content: center;
+    /*margin-top:5%;*/
+}
+
+/*Botão Salvar do form*/
+#saveQuestion {
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px $buracoNegro;
+    cursor: pointer;
+}
+
+/*-------------------------------------------------------------------*/
+#botoesForm {
+    /*border: 2px solid $sangue;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    max-width: 300px;
+    min-width: 290px;
+    min-height: 60px;
+    margin: auto auto;
+    /*box-shadow: 2px 2px 3px $buracoNegro;*/
+}
+
+/*Botão sair do form*/
+#formOff {
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px $buracoNegro;
+    cursor: pointer;
+}
+
+#editMode {
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px $buracoNegro;
+    cursor: pointer;
+}
+
+/*------------------------------------------------------*/
+/*Modal do modo edit*/
+/*.modalli {
+    border:1px solid $oceanoAzul;
+    background-color: $anoitecer;   
+    min-height: 350px;
+    margin: auto auto;
+    box-shadow: 2px 2px 3px $sombraModalli;
+    border: none;
+    border-radius: 5px;
+    min-width: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    padding: 20px;*/
+/*animation: surja 2s;
+    transition: all 2s;*/
+
+
+/*--------------------------------------------------------*/
+/*Div que abriga o conteúdo da pergunta no modo edit*/
+#conteudoPergunta {
+    /*border: 2px solid $sangue;*/
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    background-color: $olhosAzuis;
+    box-shadow: 2px 2px 3px $buracoNegro;
+    padding: 5px 5px;
+}
+
+#conteudoPergunta p {
+    line-height: 19px;
+}
+
+#conteudoPergunta input {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    box-shadow: 2px 2px 3px $buracoNegro;
+    border: none;
+
+}
+
+.comandosEdit {
+    /*border: 2px solid $buracoNegro;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    gap:3px;
+}
+
+/*Botoes do modo edit*/
+#anterior,
+#proxima,
+#editQuestion,
+#deleteQuestion,
+#saveChanges {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px $buracoNegro;
+    cursor: pointer;
+}
+
+.efeitoHover:hover {
+    background-color: $folha;
+}
+
+.efeitoHover {
+    transition: transform 0.3s ease;
+}
+
+.efeitoHover:active {
+    transform: scale(0.8);
+}

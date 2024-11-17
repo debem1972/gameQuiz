@@ -1,0 +1,175 @@
+git <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jogo quiz de perguntas e respostas!">
+    <meta name="keywords" content="game,game em javaScript,aplicativo web,app web mobile,app web,programação">
+    <meta name="author" content="Daniel Lopes Bemfica">
+    <title>projetoGameQuiz</title>
+</head>
+
+<body>
+    <div class="capa">
+
+        <div class="title">
+            <p id="letraQq" class="letraQ">Q</p>
+            <p id="letraUu" class="letraU">U</p>
+            <p id="letraIi" class="letraI">I</p>
+            <p id="letraZe" class="letraZ">Z</p>
+        </div>
+        <!--Menu do game-->
+        <div id="quizOptions" class="oculto">
+            <button id="meuQuiz" class="efeitoHover">Meu Quiz</button>
+            <!--Modal informativo ao usuário dizendo que não se pode jogar ste modo de jogo sem criar perguntas...!-->
+            <div id="modalPerguntas" class="oculto"></div>
+            <!--*******************************************-->
+            <!--Modos desativados temporariamente-->
+            <!--<button id="cinema" class="efeitoHover">Cinema</button>
+            <button id="desenhos" class="efeitoHover">Desenhos da tv</button>
+            <button id="quadrinhos" class="efeitoHover">Quadrinhos</button>
+            <button id="geografia" class="efeitoHover">Geografia</button>-->
+            <button id="formOn" class="efeitoHover">Crie seu Quiz</button>
+        </div>
+
+        <!--Modal para nome e score do último jogador-->
+        <div id="modalAnterior" class="modal oculto">
+            <div class="modal-content">
+                <span id="closer" class="close" title="Fechar">&times;</span>
+                <h2>Jogador anterior</h2>
+                <p id="nomeAnterior"></p>
+                <p id="pontuacaoAnterior"></p>
+            </div>
+        </div>
+
+        <div id="modalNovoJogador" class="modal oculto">
+            <div class="modal-content">
+                <span id="closeded" class="close" title="Fechar">&times;</span>
+                <h2>Novo Jogador</h2>
+                <div id="entradaDadosGamer">
+                    <label for="nomeJogador">Nome:</label>
+                    <input type="text" id="nomeJogador" name="nomeJogador" required autocomplete="off">
+                </div>
+                <button id="btnSalvarNome" class="efeitoHover" title="Salvar nome">Salvar</button>
+            </div>
+
+        </div>
+
+    </div>
+    <!--Modal de boas vindas ao jogador-->
+    <div id="welcomeMessage" class="oculto"></div>
+    <!--********************************************-->
+    <!--Modal informativo ao usuário dizendo que não se pode salvar vazio o nome do jogador...!-->
+    <div id="modalCampoNomeJogador" class="oculto"></div>
+    <!--********************************************-->
+    <div id="quiz" class="oculto" data-status="ok">
+        <div id="infos">
+            <div id="cronometer">
+                <div id="timer">
+                    <p>Timer</p>
+                </div>
+                <div id="cronos">
+                    <!--Timer 00:00:00-->
+                </div>
+            </div>
+            <div id="score">
+                <p>Score:</p> <span id="pontuacaoAtual">0</span>
+            </div>
+        </div>
+        <h2 id="pergunta"></h2>
+        <div id="respostas">
+            <button id="resp0" class="resposta efeitoHover"></button>
+            <button id="resp1" class="resposta efeitoHover"></button>
+            <button id="resp2" class="resposta efeitoHover"></button>
+            <button id="resp3" class="resposta efeitoHover"></button>
+        </div>
+        <br><br>
+        <button id="confirm">Confirmar</button>
+        <div class="botoesGame">
+            <i id="nextQuestion" class="fa-solid fa-forward" title="Pular pergunta! Apenas duas chances!"></i>
+            <i id="callFriend" class="fa-solid fa-phone" title="Ligar para um amigo!"></i>
+        </div>
+        <!--***********************************-->
+        <!-- 1º Modal informativo ao jogador-->
+        <div id="firstPulo" class="oculto"></div>
+        <!-- 2º Modal informativo ao jogador-->
+        <div id="secondPulo" class="oculto"></div>
+
+    </div>
+    <div id="status" class="oculto">
+        <h2 id="mensagem">Game Over!!!</h2>
+        <!--<button id="novoJogo">Start</button>-->
+
+        <button id="sair" class="efeitoHover">Start</button>
+    </div>
+
+
+    <!--Seção de inserção de dados no game: somente para o dev-->
+
+    <div class="entradaDados oculto">
+        <h3>Formulário de inserção de dados no seu quiz</h3>
+        <!-- Adicione este formulário HTML onde deseja que os usuários insiram novas perguntas -->
+
+        <form id="novaPerguntaForm">
+            <label for="novaPergunta">Nova Pergunta:</label>
+            <input type="text" id="novaPergunta" name="novaPergunta" tabindex="1" required>
+
+            <label for="resposta1">Resposta 0:</label>
+            <input type="text" id="resposta1" name="resposta1" tabindex="2" required>
+
+            <label for="resposta2">Resposta 1:</label>
+            <input type="text" id="resposta2" name="resposta2" tabindex="3" required>
+
+            <label for="resposta3">Resposta 2:</label>
+            <input type="text" id="resposta3" name="resposta3" tabindex="4" required>
+
+            <label for="resposta4">Resposta 3:</label>
+            <input type="text" id="resposta4" name="resposta4" tabindex="5" required>
+
+            <label for="correta">Índice da resposta correta:</label>
+            <input type="number" id="correta" name="correta" min="0" max="3" tabindex="6" required>
+
+            <label for="dica">Dica:</label>
+            <input type="text" id="dica" name="dica" tabindex="7" required>
+
+            <div class="savePerguntasButon">
+                <button id="saveQuestion" class="efeitoHover" type="button" tabindex="8" onclick="salvarPergunta()"
+                    title="Salvar pergunta">Salvar</button>
+            </div>
+        </form>
+        <div id="botoesForm">
+            <button id="formOff" class="efeitoHover" title="Fechar formulário">Sair</button>
+            <button id="editMode" class="efeitoHover" onclick="abrirModal()" title="Abre modo edição">Área de
+                edição</button>
+            <!-- Modal de Edição de Perguntas -->
+            <div id="editarPerguntaModal" class="modal oculto">
+                <div class="modal-content">
+                    <span class="close" onclick="fecharModal()" title="Fechar modo edição">&times;</span>
+                    <h2>Área de edição das Perguntas</h2>
+                    <div id="conteudoPergunta"></div>
+                    <div class="comandosEdit">
+                        <button id="anterior" class="efeitoHover" title="voltar"><img
+                                src="./image/AnteriorQuestions.png" width="30px"></button>
+                        <button id="proxima" class="efeitoHover" title="próxima"><img src="./image/proximaQuestion.png"
+                                width="30px"></button>
+                        <button id="editQuestion" class="efeitoHover" title="editar"><img
+                                src="./image/editQuestions.png" width="30px"></button>
+                        <button id="deleteQuestion" class="efeitoHover" title="deletar"><img
+                                src="./image/deleteQuestions.png" width="30px"></button>
+                        <button id="saveChanges" class="efeitoHover" title="salvar" class="botoesModoEdit oculto"><img
+                                src="./image/saveQuestions.png" width="30px"></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./lib/js/jquery-3.7.1.js"></script>
+    <script src="./lib/js/meuQuiz3.js" defer></script>
+    <script src="./lib/js/salvandoPerguntas2.js" defer></script>
+    <script src="./lib/js/modoEditar1.js" defer></script>
+</body>
+
+</html>
